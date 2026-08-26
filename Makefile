@@ -56,9 +56,9 @@ $(TWEAK_NAME)_INJECT_DYLIBS = \
 	$(THEOS_OBJ_DIR)/YTVideoOverlay.dylib \
 	$(THEOS_OBJ_DIR)/YTweaks.dylib
 
-ifeq ($(SPONSORBLOCK_ENABLED),1)
+
 $(TWEAK_NAME)_INJECT_DYLIBS += $(THEOS_OBJ_DIR)/iSponsorBlock.dylib
-endif
+
 
 $(TWEAK_NAME)_EMBED_LIBRARIES = $(THEOS_OBJ_DIR)/libcolorpicker.dylib
 $(TWEAK_NAME)_EMBED_FRAMEWORKS = $(_THEOS_LOCAL_DATA_DIR)/$(THEOS_OBJ_DIR_NAME)/install_Alderis.xcarchive/Products/var/jb/Library/Frameworks/Alderis.framework
@@ -79,9 +79,9 @@ include $(THEOS)/makefiles/common.mk
 
 ifneq ($(JAILBROKEN),1)
 SUBPROJECTS += Tweaks/Alderis Tweaks/DontEatMyContent Tweaks/FLEXing/libflex Tweaks/Return-YouTube-Dislikes Tweaks/YTABConfig Tweaks/YouGroupSettings Tweaks/YTIcons Tweaks/YouLoop Tweaks/YouPiP Tweaks/YouQuality Tweaks/YouSlider Tweaks/YouSpeed Tweaks/YouTimeStamp Tweaks/YTVideoOverlay Tweaks/YTweaks
-ifeq ($(SPONSORBLOCK_ENABLED),1)
+
 SUBPROJECTS += Tweaks/iSponsorBlock
-endif
+
 ifeq ($(YTUHD_ENABLED),1)
 SUBPROJECTS += Tweaks/YTUHD
 endif
